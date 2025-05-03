@@ -1,0 +1,88 @@
+.about-us-section {
+  background-color: rgba(254, 243, 226, 0.9);
+  color: #FA812F;
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.4;
+    color: #FA812F;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #444;
+  }
+
+  button {
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 10rem;
+    background-color: #FFB22C;
+    color: white;
+    border: none;
+
+    &:hover {
+      background-color: #FA812F;
+      color: #fff;
+    }
+  }
+
+  // img {
+  //   object-fit: cover;
+  //   height: 100%;
+  //   width: 100%;
+  //   max-height: 200px;
+  // }
+
+  .pet-image {
+    position: relative;
+    width: 100%;
+    max-height: 200px;
+    border-radius: 0.75rem;
+    overflow: hidden;  // ensure overlay and img clip correctly
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      max-height: 200px;
+      border-radius: 0.75rem;
+      position: relative;
+  
+      // Overlay gradient to give color to B&W photos
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom right,
+          rgba(255, 178, 44, 0.3),
+          rgba(250, 129, 47, 0.3)
+        );
+        border-radius: 0.75rem;
+        z-index: 1;
+
+    }  
+  }
+}
+
+  @media (max-width: 576px) {
+    .pet-card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+  }
+
+  .col-6 {
+    position: relative;
+
+    img {
+      z-index: 0;
+    }
+  }
+}

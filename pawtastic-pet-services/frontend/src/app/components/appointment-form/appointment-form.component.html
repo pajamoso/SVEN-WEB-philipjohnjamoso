@@ -1,0 +1,80 @@
+<section id="appointment" class="services-form-section py-5">
+  <div class="container">
+    <div class="row d-lg-flex align-items-stretch">
+      <!-- Left Column: Services -->
+      <div class="col-lg-6 mb-4 mb-lg-0 p-0">
+        <div class="bg_puppy">
+          <div class="bg-overlay d-flex flex-column justify-content-center p-5">
+            <div class="logo-bg mb-4">
+              <img src="../../assets/images/pawtastic-logo-nobg.png" alt="Pawtastic logo" class="logo-img" (click)="scrollToTop()" style="cursor: pointer;" />
+            </div>
+            <h3 class="fw-bold mb-4">All services include:</h3>
+            <ul class="list-unstyled ps-3 fs-5">
+              <li class="mb-3">📸 A photo update for you along the walk</li>
+              <li class="mb-3">🔔 Notifications of sitter arrival</li>
+              <li class="mb-3">🍖 Treats for your pet, with your permission</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Form -->
+      <div class="col-lg-6 mb-4 mb-lg-0" id="appointment-form">
+        <div class="form-card shadow rounded-4 p-5 bg-white h-100">
+          <h4 class="mb-4">We’ll take your dog for a walk. Just tell us when!</h4>
+
+          <div *ngIf="errors.length" class="alert alert-danger">
+            <ul class="mb-0">
+              <li *ngFor="let err of errors">{{ err }}</li>
+            </ul>
+          </div>
+
+          <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+            <!-- Frequency -->
+            <div class="mb-4">
+              <label for="frequency" class="form-label">Frequency</label>
+              <select class="form-select" id="frequency" formControlName="frequency">
+                <option>One time</option>
+                <option>Recurring</option>
+              </select>
+            </div>
+
+            <!-- Date & Time -->
+            <div class="row mb-4 gx-3">
+              <div class="col-6">
+                <label for="date" class="form-label">Start date</label>
+                <input type="date" class="form-control" id="date" formControlName="date" />
+              </div>
+              <div class="col-6">
+                <label for="time" class="form-label">Time</label>
+                <input type="time" class="form-control" id="time" formControlName="time" />
+              </div>
+            </div>
+
+            <!-- Days -->
+            <fieldset class="mb-4" formGroupName="days">
+              <legend class="form-label mb-2">Days</legend>
+              <div class="d-flex flex-wrap gap-2">
+                <div class="form-check" *ngFor="let day of ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']">
+                  <input class="form-check-input" type="checkbox" [id]="day.toLowerCase()" [formControlName]="day.toLowerCase()" />
+                  <label class="form-check-label" [for]="day.toLowerCase()">{{ day }}</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Notes -->
+            <div class="mb-4">
+              <label for="notes" class="form-label">Notes for your sitter</label>
+              <textarea class="form-control" id="notes" rows="3" placeholder="Special instructions, gate code, etc." formControlName="notes"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="text-end">
+              <button type="submit" class="btn btn-primary btn-lg">Schedule Service</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

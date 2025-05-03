@@ -1,0 +1,116 @@
+.services-form-section {
+  background-color:  #FEF3E2;
+
+  .row {
+    // on lg+ make equal-height columns
+    @media (min-width: 992px) {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+
+  // Left Column
+  .bg_puppy {
+    background-image: 
+      linear-gradient(
+        to bottom right,
+        rgba(255, 243, 226, 0.6),
+        rgba(250, 129, 47, 0.4)
+      ),
+      url('/assets/images/peanut.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 2rem;
+    height: 100%; // fill parent
+    overflow: hidden;
+
+    .bg-overlay {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 1.5rem;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+
+      .logo-bg {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+
+        .logo-img {
+          max-width: 140px;
+          height: auto;
+        }
+      }
+
+      h3 {
+        color: #fff;
+      }
+    }
+  }
+
+  // Right Column Form
+  .form-card {
+    background-color: #fff;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h4 {
+      color: #FA812F;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .form-control,
+    .form-select {
+      border-radius: 2rem;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ddd;
+      transition: border-color 0.3s;
+      &:focus {
+        border-color: #FFB22C;
+        box-shadow: 0 0 0 0.2rem rgba(255, 178, 44, 0.25);
+      }
+    }
+
+    fieldset {
+      border: none;
+      legend {
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+      .form-check-input {
+        accent-color: #FFB22C;
+      }
+      .form-check-label {
+        margin-left: 0.25rem;
+      }
+    }
+
+    textarea.form-control {
+      border-radius: 1rem;
+    }
+
+    .btn-primary {
+      background-color: #FFB22C;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.2s;
+
+      &:hover {
+        background-color: #F3C623;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}

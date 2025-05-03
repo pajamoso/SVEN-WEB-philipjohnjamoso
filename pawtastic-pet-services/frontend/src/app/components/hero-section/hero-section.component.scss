@@ -1,0 +1,141 @@
+.hero-container {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(254, 243, 226, 0.85), // #FEF3E2 (light cream)
+    rgba(255, 178, 44, 0.4)    // #FFB22C (accent glow)
+  ), 
+  url('/assets/images/img_dog_closeup2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  min-height: 85vh;
+  position: relative;
+  color: white;
+  
+
+  .navbar {
+    background-color: rgba(254, 243, 226, 0.9); 
+    color: #FA812F;
+    font-weight: 600;
+    z-index: 10;
+    padding: 1rem 2rem; 
+
+    @media (min-width: 768px) {
+      padding: 2rem 6rem;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 3rem 10rem;
+    }
+
+    flex-direction: column;
+    align-items: start;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    nav {
+      margin-top: 1rem;
+
+      @media (min-width: 768px) {
+        margin-top: 0;
+      }
+    }
+
+    nav a {
+      color: #FA812F;
+    
+      &:hover {
+        color: #FFB22C;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  
+    .logo-img {
+      height: 60px;
+      width: auto;
+  
+      @media (min-width: 768px) {
+        height: 70px;
+      }
+  
+      @media (min-width: 1200px) {
+        height: 80px;
+      }
+  
+      object-fit: contain;
+
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .hero-content {
+    height: calc(90vh - 72px);
+    padding: 2rem;
+
+    @media (min-width: 768px) {
+      padding-right: 6rem;
+      justify-content: end;
+      text-align: end;
+    }
+
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding: 2rem 1rem;
+    opacity: 80%;
+
+    h1 span {
+      font-size: 1.25rem;
+
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
+
+      @media (min-width: 1200px) {
+        font-size: 3rem;
+      }
+      
+      color: #FA812F;
+      text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.4);
+      
+
+    }
+
+    button {
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 10rem;
+
+      background-color: #FFB22C;
+      color: white;
+  
+      &:hover {
+        background-color: #F3C623;
+        color: black;
+      }
+    }
+
+  }
+
+  h3 {
+    font-weight: 600;
+    z-index: 10;
+  }
+
+}
+

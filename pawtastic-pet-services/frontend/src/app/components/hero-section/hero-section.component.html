@@ -1,0 +1,18 @@
+<header class="hero-container">
+  <div class="navbar sticky-top d-flex justify-content-between align-items-center py-3">
+    <a href="#" class="brand-logo" (click)="scrollToTop()">
+      <img src="../../assets/images/pawtastic-logo-nobg.png" alt="Pawtastic logo" class="logo-img" />
+    </a>
+    <nav class="mt-5">
+      <a class="mx-3 text-decoration-none" href="#" (click)="scrollTo('about')">About Us</a>
+      <a class="mx-3 text-decoration-none" href="#" (click)="scrollTo('appointment')">Schedule a Visit</a>
+    </nav>
+  </div>
+
+  <div class="hero-content container-fluid d-flex justify-content-end align-items-center text-light text-end">
+    <div class="hero-text me-5">
+      <h1 class="display-5 fw-bold"><span>We care for your<br />furry little loved ones<br />while you're away</span></h1>
+      <button class="btn btn-light mt-3" (click)="scrollTo('appointment')">Schedule a Visit</button>
+    </div>
+  </div>
+</header>

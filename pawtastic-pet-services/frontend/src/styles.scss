@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  @media (max-width: 767px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    .hero-content p {
+      font-size: 1rem;
+    }
+    .hero-image img {
+      max-height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+  }
+
+  .sticky-top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1020; // Bootstrap uses 1020+ for navbar to stay above
+    background-color: #f8f9fa; // bg-light equivalent
+    padding: 1rem;
+  }
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
