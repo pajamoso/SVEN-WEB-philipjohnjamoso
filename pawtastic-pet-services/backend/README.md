@@ -25,6 +25,7 @@ spring.datasource.username=sa
 spring.datasource.password=password
 
 Or use H2 for demo/testing.
+You can view the H2 database by navigating to http://localhost:8080/h2-console. Set the JDBC URL to jdbc:h2:mem:testdb and use sa as the username and password for the password.
 
 🔐 CORS & Auth
 Accepts CORS from http://localhost:4200
@@ -41,4 +42,4 @@ Receives encrypted payload:
   "data": "encrypted-hex-string"
 }
 
-Java 17 JDK is included in the source code
+Java 17 JDK link : https://download.java.net/java/GA/jdk17.0.1/2a2082e5a09d4267845be086888add4f/12/GPL/openjdk-17.0.1_windows-x64_bin.zip
