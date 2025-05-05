@@ -1,6 +1,6 @@
 ## ✅ `backend/README.md`
 
-```markdown
+````markdown
 # ⚙️ Backend - Simba Pet Services
 
 This is the Spring Boot 3.2 API backend that receives encrypted appointment data.
@@ -13,7 +13,7 @@ This is the Spring Boot 3.2 API backend that receives encrypted appointment data
 ./mvnw spring-boot:run
 
 Or via IDE:
-Run SimbaApplication.java
+Run PetservicesApplication.java
 
 App will run at: http://localhost:8080
 
@@ -43,3 +43,5 @@ Receives encrypted payload:
 }
 
 Java 17 JDK link : https://download.java.net/java/GA/jdk17.0.1/2a2082e5a09d4267845be086888add4f/12/GPL/openjdk-17.0.1_windows-x64_bin.zip
+```
+````
